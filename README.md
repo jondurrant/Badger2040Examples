@@ -8,6 +8,7 @@ These examples where written to support a Video on my [YouTube channel](https://
 2 Text  Draw using a font
 3 Line Draw to show a clock face
 4 Sleep place the device into sleep low power draw
+5 Clock this uses a DS3231 connected to GP04 and GP05
 
 ## Clone and Build
 Clone the repository recurising submodules

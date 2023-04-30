@@ -4,7 +4,7 @@ add_executable(${NAME}
         )
 
 # Pull in our pico_stdlib which pulls in commonly used features
-target_link_libraries(${NAME} pico_stdlib badger2040 hardware_spi )
+target_link_libraries(${NAME} pico_stdlib badger2040 hardware_spi DS3231)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(${NAME})

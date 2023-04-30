@@ -11,7 +11,6 @@
 #include <algorithm>
 #include "pico/time.h"
 #include "pico/platform.h"
-#include "hardware/adc.h"
 
 #include "common/pimoroni_common.hpp"
 #include "badger2040.hpp"

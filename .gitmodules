@@ -1,3 +1,6 @@
 [submodule "lib/pimoroni-pico"]
 	path = lib/pimoroni-pico
 	url = https://github.com/pimoroni/pimoroni-pico
+[submodule "lib/RP2040DS3231RTC"]
+	path = lib/RP2040DS3231RTC
+	url = https://github.com/jondurrant/RP2040DS3231RTC

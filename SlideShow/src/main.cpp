@@ -16,9 +16,10 @@
 #include "badger2040.hpp"
 
 #include "slides.h"
+#include "royal.h"
 
 #define DELAY 5000
-#define SLIDES 3
+#define SLIDES 4
 
 using namespace pimoroni;
 
@@ -26,6 +27,7 @@ Badger2040 badger;
 
 
 const uint8_t * images[]= {
+	Royal,
 	Slide1,
 	Slide2,
 	Slide3
