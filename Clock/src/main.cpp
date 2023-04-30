@@ -32,15 +32,26 @@ DS3231 rtc;
 
 
 void clock(uint8_t x, uint8_t y, uint8_t handLen, uint8_t hour, uint8_t min){
-
+	float a;
+	int x2, y2;
 
 	float handShort = (float)handLen * 0.75;
 
-	float a = (float)hour/12.0 * 6.28319;
-	int x2 = sin(a)*  handShort;
-	int y2 = cos(a)* handShort;
+	//Dial
+	for (uint8_t i=0; i < 12; i++){
+		a = (float)i/12.0 * 6.28319;
+		x2 = sin(a)*  handLen;
+		y2 = cos(a)* handLen;
+		badger.pixel(x+x2, y-y2);
+	}
+
+	//Hour hand
+	a = (float)hour/12.0 * 6.28319;
+	x2 = sin(a)*  handShort;
+	y2 = cos(a)* handShort;
 	badger.line(x, y, x+x2, y-y2);
 
+	//Minute hand
 	a = (float)min/60.0 * 6.28319;
 	x2 = sin(a)* (float) handLen;
 	y2 = cos(a)* (float) handLen;
