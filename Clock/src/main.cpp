@@ -40,6 +40,7 @@ void clock(uint8_t x, uint8_t y, uint8_t handLen, uint8_t hour, uint8_t min){
 	//Dial
 	for (uint8_t i=0; i < 12; i++){
 		a = (float)i/12.0 * 6.28319;
+		a = a + (1.0/12.0)*(float)min/60.0 * 6.28319;
 		x2 = sin(a)*  handLen;
 		y2 = cos(a)* handLen;
 		badger.pixel(x+x2, y-y2);
